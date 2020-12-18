@@ -6,3 +6,10 @@
   --bg-primary: #23232e;
   --bg-secondary: #141418;
 }
+
+body {
+  color:black;
+  background-color:white;
+  margin: 0;
+  padding: 0;
+}
