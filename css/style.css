@@ -106,3 +106,13 @@ main {
   letter-spacing: 0.3ch;
   width: 100%;
 }
+
+.logo svg {
+  transform: rotate(360deg);
+  transition: transform var(--transition-speed);
+
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg)
+}
