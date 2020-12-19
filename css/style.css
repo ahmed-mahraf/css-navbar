@@ -5,6 +5,7 @@
   --text-secondary: #ececec;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
+  --transition-speed: 400ms;
 }
 
 body {
@@ -34,7 +35,7 @@ main {
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
-  transition: width 200ms ease;
+  transition: width var(--transition-speed) ease;
 }
 
 .navbar-nav {
@@ -68,6 +69,7 @@ main {
 .nav-link:hover {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
+  color: var(--text-secondary);
 }
 
 .link-text {
@@ -76,16 +78,9 @@ main {
 }
 
 .nav-link svg {
+  width: 2rem;
   min-width: 2rem;
   margin: 0 1.5rem;
-}
-
-.navbar:hover {
-  width: 16rem;
-}
-
-.navbar:hover .link-text {
-  display: block;
 }
 
 .svg-inline--fa {
@@ -100,19 +95,27 @@ main {
   text-align: center;
   color: var(--text-secondary);
   background: var(--bg-secondary);
-  text-transform: uppercase;
+  font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
 }
 
 .logo svg {
-  transform: rotate(360deg);
+  transform: rotate(0deg);
   transition: transform var(--transition-speed);
 
 }
 
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
 .navbar:hover .logo svg {
-  transform: rotate(-180deg)
+  transform: rotate(-360deg)
 }
 
 /* MEDIA QUERIES */
@@ -160,7 +163,7 @@ main {
 
   .navbar:hover .logo svg
   {
-    margin-left: 11rem;
+    margin-left: 10rem;
   }
 
   .navbar:hover .logo-text
