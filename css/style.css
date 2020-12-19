@@ -107,6 +107,7 @@ main {
   width: 100%;
 }
 
+/* LOGO */
 .logo svg {
   transform: rotate(360deg);
   transition: transform var(--transition-speed);
